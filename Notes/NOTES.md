@@ -1424,7 +1424,7 @@ Also, it will create a separate bundle for the Bus component. And, separate js f
 There will be an error, in the beginning after putting this code.
 
 But, why is there an error?
--> Because, the react render is very fast and till the time of rendering, as the Bus component code was not present, and bundle is loaded late as it takes time, we are calling it on-demand. Hence, react suspends the rendering until the Bus component bundle is loaded.
+-> Because, the react render is very fast and till the time of rendering, as the Bus component code was not present, and the bundle is loaded late as it takes time, we are calling it on-demand. Hence, react suspends the rendering until the Bus component bundle is loaded.
 
 So, we need to handle this error. We can do this by using the Suspense component.
 
@@ -1445,3 +1445,10 @@ import { Suspense } from "react";
 <h2>Day 30</h2>
 
 <h3>Styling with Tailwind CSS</h3>
+
+------------------------------------------------------------------------------
+
+<h1>Advanced React Patterns</h1>
+-> Render Props Pattern - For complete control over what the component renders, by passing in a function that tells the component what to render. It was more common before hooks, but still useful.
+
+-> Compound Component Pattern - For very self-contained components that need/want to manage their own state. Compound components are like fancy super-components.
